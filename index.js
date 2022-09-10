@@ -56,13 +56,13 @@ const showCart = () => {
 
     totalSum = (Math.ceil(totalSum * 20) / 20).toFixed(2)
     totalrealSum = totalrealSum.toFixed(2);
-    totalTax= totalSum-totalrealSum;
+    totalTax = totalSum - totalrealSum;
     totalTax = totalTax.toFixed(2);
-    
+
 
     document.getElementById('taxx').innerText = `Sales Tax : ${totalTax}`;
     document.getElementById('priceWithTax').innerText = `Total : ${totalSum}`;
-    
+
 
     document.getElementById('home').style.display = 'none';
     document.getElementById('aboutus').style.display = 'none';
@@ -259,173 +259,199 @@ const exincr9 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 const exdecr1 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 
     let count = document.getElementById('incrementdecrementValue1').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue1').value = count;
+
+        let totalprice = document.getElementById('total1').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal1').value = pricencount;
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total1').value = leftprice;
+        document.getElementById('list1').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue1').value = count;
 
-    let totalprice = document.getElementById('total1').value;
-    let pricencount = price * count;
-    document.getElementById('totalnormal1').value = pricencount;
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total1').value = leftprice;
-    document.getElementById('list1').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 const exdecr2 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 
     let count = document.getElementById('incrementdecrementValue2').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue2').value = count;
+
+        let totalprice = document.getElementById('total2').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal2').value = pricencount;
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total2').value = leftprice;
+        document.getElementById('list2').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue2').value = count;
 
-    let totalprice = document.getElementById('total2').value;
-    let pricencount = price * count;
-    document.getElementById('totalnormal2').value = pricencount;
-
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total2').value = leftprice1;
-    document.getElementById('list2').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 const exdecr3 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 
     let count = document.getElementById('incrementdecrementValue3').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue3').value = count;
+
+        let totalprice = document.getElementById('total3').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal3').value = pricencount;
+
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total3').value = leftprice;
+        document.getElementById('list3').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue3').value = count;
 
-    let totalprice = document.getElementById('total3').value;
-    let pricencount = price * count;
-    document.getElementById('totalnormal3').value = pricencount;
-
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total3').value = leftprice;
-    document.getElementById('list3').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 
 const exdecr4 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 
     let count = document.getElementById('incrementdecrementValue4').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue4').value = count;
+
+        let totalprice = document.getElementById('total4').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal4').value = pricencount;
+
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total4').value = leftprice;
+        document.getElementById('list4').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue4').value = count;
 
-    let totalprice = document.getElementById('total4').value;
-    let pricencount= price*count;
-    document.getElementById('totalnormal4').value = pricencount;
-
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total4').value = leftprice;
-    document.getElementById('list4').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 const exdecr5 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 
     let count = document.getElementById('incrementdecrementValue5').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue5').value = count;
+
+        let totalprice = document.getElementById('total5').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal5').value = pricencount;
+
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total5').value = leftprice;
+        document.getElementById('list5').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue5').value = count;
 
-    let totalprice = document.getElementById('total5').value;
-    let pricencount= price*count;
-    document.getElementById('totalnormal5').value = pricencount;
-
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total5').value = leftprice;
-    document.getElementById('list5').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 const exdecr6 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
     let count = document.getElementById('incrementdecrementValue6').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue6').value = count;
+
+        let totalprice = document.getElementById('total6').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal6').value = pricencount;
+
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total6').value = leftprice;
+        document.getElementById('list6').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue6').value = count;
 
-    let totalprice = document.getElementById('total6').value;
-    let pricencount= price*count;
-    document.getElementById('totalnormal6').value = pricencount;
-
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total6').value = leftprice;
-    document.getElementById('list6').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 const exdecr7 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 
     let count = document.getElementById('incrementdecrementValue7').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue7').value = count;
+
+        let totalprice = document.getElementById('total7').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal7').value = pricencount;
+
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total7').value = leftprice;
+        document.getElementById('list7').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue7').value = count;
 
-    let totalprice = document.getElementById('total7').value;
-    let pricencount= price*count;
-    document.getElementById('totalnormal7').value = pricencount;
-
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total7').value = leftprice;
-    document.getElementById('list7').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 const exdecr8 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 
     let count = document.getElementById('incrementdecrementValue8').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue8').value = count;
+
+        let totalprice = document.getElementById('total8').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal8').value = pricencount;
+
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total8').value = leftprice;
+        document.getElementById('list8').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue8').value = count;
 
-    let totalprice = document.getElementById('total8').value;
-    let pricencount= price*count;
-    document.getElementById('totalnormal8').value = pricencount;
-
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total8').value = leftprice;
-    document.getElementById('list8').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 const exdecr9 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
 
     let count = document.getElementById('incrementdecrementValue9').value;
-    if (count > 0)
+    if (count > 0) {
         count = count - 1;
+        document.getElementById('incrementdecrementValue9').value = count;
+
+        let totalprice = document.getElementById('total9').value;
+        let pricencount = price * count;
+        document.getElementById('totalnormal9').value = pricencount;
+
+        let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
+
+        leftprice = leftprice.toFixed(2);
+        document.getElementById('total9').value = leftprice;
+        document.getElementById('list9').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
+    }
+
     else
         count = 0;
-    document.getElementById('incrementdecrementValue9').value = count;
 
-    let totalprice = document.getElementById('total9').value;
-    let pricencount= price*count;
-    document.getElementById('totalnormal9').value = pricencount;
-
-    let leftprice = checkForApplicableTaxdecr(isBooksMedicalFoodItems, isImported, totalprice, price)
-
-    leftprice = leftprice.toFixed(2);
-    document.getElementById('total9').value = leftprice;
-    document.getElementById('list9').innerText = `* Item Name : ${itemName} : Quantity--${count}  Price-- $${leftprice}`;
 }
 
 
