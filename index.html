@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Akronim|Audiowide' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'>
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">X-MART</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" onclick="homepage()">Home</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <button class="btn btn-danger" onclick="showCart()">Calculate Tax price</button>
+                        <button class="btn btn-success" onclick="excontactus()">Contact Us</button>
+                        <button class="btn btn-success" type="submit" onclick="exaboutus()">About Us</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <div id="home" class="container">
+
+        <h1 id="heading">Sales Tax Calculator</h1>
+        <div id="itemImages">
+            <div class="imageInline">
+                <img class="images"
+                    src="https://5.imimg.com/data5/SELLER/Default/2020/10/ZB/JR/SC/113288716/11-06-2020-jpg-500x500.jpg">
+                <div class="itemDescription">
+                    <h5>Book- You Can Win</h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="12.49" id="price1" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button id="decrement" class="quantityAlignment buttonColor"
+                            onclick="exdecr1('Book-You_Can_Win',true,false,12.49)">-</button>
+                        <input value="0" id="incrementdecrementValue1" class="quantityAlignment">
+                        <button id="" class="quantityAlignment buttonColor"
+                            onclick="exincr1('Book-You_Can_Win',true,false,12.49)">+</button>
+                    </div>
+
+
+                    <div>
+                        <span>Taxed Price : </span><input id="total1" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal1" value="0" class="inputs" disabled>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="imageInline">
+                <img class="images"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFE2-TmG3KKP8tBvx_stuMu7X-3TDi2A8L0wpTi4sf4eshELCR7E-1k-xgFhDVQkypA4&usqp=CAU">
+                <div class="itemDescription">
+                    <h5>CD- Music CD</h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="14.99" id="price2" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button id="decrement" class="quantityAlignment buttonColor"
+                            onclick="exdecr2('Music_CD',false,false,14.49)">-</button>
+                        <input value="0" id="incrementdecrementValue2" class="quantityAlignment">
+                        <button id="increment" class="quantityAlignment buttonColor"
+                            onclick="exincr2('Music_CD',false,false,14.49)">+</button>
+                    </div>
+
+                    <div>
+                        <span>Taxed Price : </span><input id="total2" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal2" value="0" class="inputs" disabled>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="imageInline">
+                <img class="images"
+                    src="https://lhcdn.mars.com/adaptivemedia/rendition/id_5ac31bebee2b6a2902764072242e07ae5951e0c4/name_5ac31bebee2b6a2902764072242e07ae5951e0c4.jpg">
+                <div class="itemDescription">
+                    <h5>Chocolate- Chocolate Bar</h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="0.85" id="price3" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button class="quantityAlignment buttonColor"
+                            onclick="exdecr3('Chocolate Bar',true,false,0.85)">-</button>
+                        <input value="0" id="incrementdecrementValue3" class="quantityAlignment">
+                        <button class="quantityAlignment buttonColor"
+                            onclick="exincr3('Chocolate Bar',true,false,0.85)">+</button>
+                    </div>
+
+                    <div>
+                        <span>Taxed Price : </span><input id="total3" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal3" value="0" class="inputs" disabled>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="imageInline">
+                <img class="images"
+                    src="https://4.imimg.com/data4/DQ/HB/MY-11275158/corporate-chocolate-gift-box-500x500.png">
+                <div class="itemDescription">
+                    <h5>Chocolate- imported box of chocolates</h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="10.00" id="price4" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button id="decrement" class="quantityAlignment buttonColor"
+                            onclick="exdecr4('imported box of chocolates',true,true,10.00)">-</button>
+                        <input value="0" id="incrementdecrementValue4" class="quantityAlignment">
+                        <button id="increment" class="quantityAlignment buttonColor"
+                            onclick="exincr4('imported box of chocolates',true,true,10.00)">+</button>
+                    </div>
+
+                    <div>
+                        <span>Taxed Price : </span><input id="total4" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal4" value="0" class="inputs" disabled>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="imageInline">
+                <img class="images"
+                    src="https://img.freepik.com/free-vector/perfume-glass-bottle-golden-silk-folded-fabric_33099-2052.jpg?w=2000">
+                <div class="itemDescription">
+                    <h5>Perfume- imported bottle of perfume</h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="47.50" id="price5" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button id="decrement" class="quantityAlignment buttonColor"
+                            onclick="exdecr5('imported bottle of perfume',false,true,47.50)">-</button>
+                        <input value="0" id="incrementdecrementValue5" class="quantityAlignment">
+                        <button id="increment" class="quantityAlignment buttonColor"
+                            onclick="exincr5('imported bottle of perfume',false,true,47.50)">+</button>
+                    </div>
+
+                    <div>
+                        <span>Taxed Price : </span><input id="total5" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal5" value="0" class="inputs" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <div class="imageInline">
+                <img class="images"
+                    src="https://myphamsweden.com/wp-content/uploads/2019/06/nuoc-hoa-nu-oriflame-33415-3.jpg">
+                <div class="itemDescription">
+                    <h5>Perfume- imported bottle of perfume</h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="27.99" id="price6" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button id="decrement" class="quantityAlignment buttonColor"
+                            onclick="exdecr6('imported bottle of perfume',false,true,27.99)">-</button>
+                        <input value="0" id="incrementdecrementValue6" class="quantityAlignment">
+                        <button id="increment" class="quantityAlignment buttonColor"
+                            onclick="exincr6('imported bottle of perfume',false,true,27.99)">+</button>
+                    </div>
+
+                    <div>
+                        <span>Taxed Price : </span><input id="total6" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal6" value="0" class="inputs" disabled>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="imageInline">
+                <img class="images"
+                    src="https://www.thehindu.com/life-and-style/luxury/co337f/article37239610.ece/alternates/FREE_435/Maison-De-Fouzdar-Port-Royale-min">
+                <div class="itemDescription">
+                    <h5>Perfume- bottle of perfume</h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="18.99" id="price7" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button id="decrement" class="quantityAlignment buttonColor"
+                            onclick="exdecr7('bottle of perfume',false,false,18.99)">-</button>
+                        <input value="0" id="incrementdecrementValue7" class="quantityAlignment">
+                        <button id="increment" class="quantityAlignment buttonColor"
+                            onclick="exincr7('bottle of perfume',false,false,18.99)">+</button>
+                    </div>
+
+                    <div>
+                        <span>Taxed Price : </span><input id="total7" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal7" value="0" class="inputs" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="imageInline">
+                <img class="images"
+                    src="data:image/jpeg;base64,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">
+                <div class="itemDescription">
+                    <h5>Pills- packet of headache pills
+                    </h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="9.75" id="price8" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button id="decrement" class="quantityAlignment buttonColor"
+                            onclick="exdecr8('packet of headache pills',true,false,9.75)">-</button>
+                        <input value="0" id="incrementdecrementValue8" class="quantityAlignment">
+                        <button id="increment" class="quantityAlignment buttonColor"
+                            onclick="exincr8('packet of headache pills',true,false,9.75)">+</button>
+                    </div>
+                    <div>
+                        <span>Taxed Price : </span><input id="total8" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal8" value="0" class="inputs" disabled>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="imageInline">
+                <img class="images" src="https://cf.shopee.ph/file/b37153a5755be7ba2fda2a78c4529ef7">
+                <div class="itemDescription">
+                    <h5>Chocolates- box of imported chocolates</h5>
+
+                    <div class="productPrice">
+                        <span>$</span><input value="11.25" id="price9" class="priceperitem" disabled><span>/Unit</span>
+                    </div>
+
+                    <div class="incrdecrButtons">
+                        <button class="quantityAlignment buttonColor"
+                            onclick="exdecr9('box of imported chocolates',true,true,11.25)">-</button>
+                        <input value="0" id="incrementdecrementValue9" class="quantityAlignment">
+                        <button id="increment" class="quantityAlignment buttonColor"
+                            onclick="exincr9('box of imported chocolates',true,true,11.25)">+</button>
+                    </div>
+
+                    <div>
+                        <span>Taxed Price : </span><input id="total9" value="0" class="inputs" disabled>
+                        <span>Normal Price : </span><input id="totalnormal9" value="0" class="inputs" disabled>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="itemsandDescription">
+            <h1 id="heading2">WE DEAL WITH BELOW MENTIONED ITEMS</h1>
+            <ul>
+                <li>
+                    <h3>MEDECINES</h3>
+                    <p>All types of allopathic medecines.</p>
+
+                </li>
+
+                <li>
+                    <h3>CHOCOLATES</h3>
+                    <p>Milk Chocolate, White Chocolate, Dark Chocolate, Semisweeet Chocolate.</p>
+                </li>
+
+                <li>
+                    <h3>PERFUMES</h3>
+                    <p>Eau de Toilette, Eau de Cologne, and the less well known Eau Fraiche.</p>
+                </li>
+
+                <li>
+                    <h3>BOOKS</h3>
+                    <p>Comic Book, Action, Adventure, Horror, Motivational.</p>
+                </li>
+
+                <div id="note">
+                    <p>NOTE:- EMI AVAILABLE (3 MONTHS)</p>
+                </div>
+
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="aboutus" class="container" style="display:none">
+        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi! Dolore tempore incidunt
+            perspiciatis consequatur dolor, provident modi accusantium. Deserunt quos dicta dolores voluptatum ducimus
+            eligendi rem consequuntur ipsum corrupti laborum magnam laboriosam dolorum quibusdam, nesciunt omnis magni
+            ea asperiores pariatur explicabo aliquam mollitia odit neque velit autem! Voluptates veritatis odio aut.
+            Dignissimos aspernatur unde, saepe quas aut, voluptatum earum dolorum ea iste nulla ipsam veritatis
+            laboriosam sed ipsa illum incidunt aliquam consequuntur quasi vitae iusto minima ad placeat
+            perferendis adipisci. Saepe quidem et facere incidunt sed itaque molestiae nulla cupiditate aliquam dolorum.
+            Labore possimus quae numquam optio placeat reprehenderit sint beatae voluptas vero soluta non repellat magni
+            ab quaerat cupiditate perferendis, cum excepturi repellendus ipsam itaque iste nobis quia quasi fugit.
+            Dolorum, debitis sit vero cum veniam vitae ipsam quia sunt voluptatibus, accusamus consectetur pariatur illo
+            possimus. Dicta excepturi commodi enim, necessitatibus nesciunt tenetur quaerat. Atque ratione alias, amet
+            quasi exercitationem molestiae iusto cupiditate facilis quo deserunt quaerat aliquam esse error ad ullam
+            corporis laudantium eveniet dolores, necessitatibus,electus excepturi error est. Rem
+            veniam molestias dolorum?</h3>
+    </div>
+
+
+
+
+    <div id="contactus" class="container">
+        <p>Contact Number:- 9620513051 / 9060098549 (Whatsapp)</p>
+        <p>Email:- ssohrab375@gmail.com</p><br>
+        <p>ADDRESS:- BLOCK C3 5F (SUGAM PARK), ASANSOL- 713302</p>
+
+    </div>
+
+    <div id="cart" style="display:none" class="itemlist">
+        <p id="list1"></p>
+        <p id="list2"></p>
+        <p id="list3"></p>
+        <p id="list4"></p>
+        <p id="list5"></p>
+        <p id="list6"></p>
+        <p id="list7"></p>
+        <p id="list8"></p>
+        <p id="list9"></p>
+
+        <h2 id="taxx"></h2>
+        <h2 id="priceWithTax"></h2>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+<script src="index.js">
+
+</script>

@@ -1,0 +1,210 @@
+.imageInline {
+    display: inline-block;
+}
+
+.imageInline {
+    border: 2px solid black;
+}
+
+.productPrice {
+    display: inline-block;
+    font-size:23px;
+}
+
+.incrdecrButtons {
+    display: inline-block;
+    margin: auto;
+    margin-left:140px;
+}
+
+.quantityAlignment{
+    display: inline-block;
+    width:30px;
+}
+
+#incrementdecrementValue{
+    width:30px;
+    font-size:20px;
+}
+
+.itemDescription{
+    margin:25px;
+}
+
+.buttonColor{
+    background-color: rgb(247, 97, 159);
+    border-radius: 3px;
+    font-size:25px;
+}
+
+.itemlist{
+    border: 2px solid black;
+    padding:50px;
+    text-align:left;
+    margin:auto;
+    background-color: rgb(247, 136, 155,.4);
+    width:800px;
+    border-radius: 10px;
+    font-size:20px;
+    margin-top:80px;
+}
+
+
+.inputs{
+    width:80px;
+}
+
+.priceperitem{
+    width: 65px;
+}
+
+
+
+
+
+
+.cartStyle{
+    margin:12px;
+    margin-top:27px;
+    margin-right:70px;
+}
+
+#aboutus {
+    padding: 60px;
+    font-size: 18px;
+    font-family: 'Aladin';
+}
+
+#contactus {
+    padding: 60px;
+    font-size: 40px;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Aladin';
+
+}
+
+#itemsandDescription {
+    margin: auto;
+    text-align: left;
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgb(255, 98, 124, 0.3);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+body {
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2015/07/18/pink-background-designs.jpg');
+}
+
+.images {
+    border: 2px solid white;
+    width: 420px;
+    height: 320px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#heading {
+    font-family: 'Akronim';
+    font-size: 122px;
+    color: rgb(105, 0, 0);
+    text-align: center;
+    margin: 50px;
+}
+
+#heading2 {
+    font-size: 42px;
+    margin: 70px;
+    font-family: Audiowide;
+}
+
+#note {
+    margin: 70px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(255, 138, 138);
+    font-size: 35px;
+    width: 610px;
+    padding: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .images {
+        border: 2px solid black;
+        width: 350px;
+        height: 250px;
+        margin: auto;
+        padding: 30px;
+
+    }
+
+    #heading {
+        font-family: 'Akronim';
+        font-size: 62px;
+        color: rgb(105, 0, 0);
+        text-align: center;
+    }
+
+    #heading2 {
+        font-size: 25px;
+        margin: 30px;
+        text-align: left;
+    }
+
+    #itemsandDescription {
+        margin: auto;
+        text-align: left;
+        padding: 0px;
+        font-size: 15px;
+
+    }
+
+    #note {
+        margin: auto;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: rgb(255, 138, 138);
+        font-size: 15px;
+        width: 310px;
+        margin-right: 5px;
+    }
+
+    #contactus {
+        padding: 20px;
+        font-size: 20px;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Aladin';
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 601px) {
+    #note {
+
+        border: 1px solid yellow;
+        background-color: rgb(255, 138, 138);
+        font-size: 20px;
+        width: 280px;
+
+    }
+}
+
+@media only screen and (max-width: 370px) and (min-width: 0px) {
+    #note {
+
+        border: 1px solid red;
+        background-color: rgb(255, 138, 138);
+        font-size: 15px;
+        width: 250px;
+
+    }
+}
