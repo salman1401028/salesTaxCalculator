@@ -317,7 +317,7 @@ const exdecr3 = (itemName, isBooksMedicalFoodItems, isImported, price) => {
     }
 
     else
-        count = 0;
+        count = 0; 
 
 }
 
