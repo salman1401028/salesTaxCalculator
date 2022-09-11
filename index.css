@@ -185,6 +185,25 @@ body {
         margin-top: 20px;
         font-family: 'Aladin';
     }
+
+    .itemlist{
+        border: 2px solid white;
+        padding:30px;
+        text-align:left;
+        margin:auto;
+        background-color: rgb(247, 136, 155,.4);
+        width:350px;
+        border-radius: 10px;
+        font-size:10px;
+        margin-top:60px;
+    }
+
+    #taxx{
+        font-size:20px;
+    }
+    #priceWithTax{
+        font-size:20px;
+    }
 }
 
 @media only screen and (max-width: 991px) and (min-width: 601px) {
